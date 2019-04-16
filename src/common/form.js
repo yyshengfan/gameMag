@@ -130,14 +130,9 @@ var form = function (option) {
     back() {
       this.$router.go(-1)
     },
-    getEnCode(){
-      this.$http.get('/enCode', this.model)
-        .then((response) => {
-          document.getElementById("enCode").innerHTML = response.data.data.img
-        })
-        .catch((response) => {
-
-        })
+    async getEnCode(){
+      const res =await this.$http.get('/enCode', this.model);
+      document.getElementById("enCode").innerHTML = res.result.img
     },
     getCode(){
       if(this.msg !== '获取短信验证码'){

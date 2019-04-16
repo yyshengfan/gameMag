@@ -167,11 +167,6 @@ var routes = [
         name: 'gameTypeSetList',
         component: gameTypeSetList,
         meta: {keepAlive: true},
-      },
-      {
-        path: '/gameSetForm/:id',
-        name: 'gameSetForm',
-        component: gameSetForm,
       }
     ]
   },
