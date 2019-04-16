@@ -1,0 +1,97 @@
+.contentTitle, .contentTitleModel {
+  width: 100%;
+  font-size: 16px;
+  text-indent: 0 !important;
+  height: 46px;
+  line-height: 46px;
+  background: #ffffff;
+  border-bottom: 1px solid #d9d9d9;
+}
+.contentTitle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 20px;
+  z-index: 20;
+}
+
+.contentTitle .first,
+.contentTitleModel .first {
+  margin: auto;
+}
+
+.contentTitle .first img,
+.contentTitleModel .first img {
+  width: 20px;
+  height: auto;
+}
+
+.fa-get-pocket {
+  color: white;
+  -webkit-text-stroke: 1px #5fa8fd;
+}
+
+.contentTitle .first a,
+.contentTitleModel .first a {
+  color: #333333;
+}
+
+.contentTitle .second,
+.contentTitleModel .second {
+  color: #939393;
+}
+
+.Titlestatic1 {
+  padding-left: 20px;
+  font-size: 16px;
+  text-indent: 0 !important;
+  height: 45px;
+  line-height: 46px;
+  background: #ffffff;
+  position: fixed;
+  top: 54px;
+  z-index: 20;
+  width: 100%;
+  margin-left: -20px;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.el-card__body {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.el-table th {
+  background-color: #f2f2f2;
+}
+
+.el-table td {
+  color: #898989;
+}
+
+.el-di {
+  margin-top: 10%;
+}
+
+.el-img {
+  width: 1000px;
+  margin-left: 12%;
+}
+
+.first {
+  margin-left: -20px;
+  font-size: 16px;
+}
+
+.second {
+  font-size: 16px;
+  color: #939393;
+}
+
+.el-icon-arrow-right:before {
+  color: #0b0c0d;
+}
+
+.tt:hover {
+  color: #369fe1;
+}

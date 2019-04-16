@@ -1,0 +1,923 @@
+.el-upload__input {
+  display: none !important;
+}
+
+.hiddenX {
+  overflow-x: hidden;
+}
+
+label {
+  font-weight: normal !important;
+}
+
+html {
+  font-size: 13px;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body, dd, div, form, h1, h2, h3, h4, h5, h6, input, li, ol, p, ul {
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: none
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  color: #333333;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: lighter;
+}
+
+a {
+  cursor: pointer !important;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+.blue,
+.blue:hover {
+  color: #369fe1 !important;
+}
+
+.noWrap {
+  word-break: keep-all;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.el-transfer-panel {
+  width: 200px;
+}
+
+/*========================================================================================================
+nav  导航条
+ ========================================================================================================*/
+.navbar {
+  border: none !important;
+}
+
+.navbar-brand {
+  height: 70px;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  text-align: center;
+}
+
+.navbar-brand > img {
+  margin-top: 14px;
+}
+
+.navbar-inverse {
+  background: white;
+  box-shadow: 0 1px 0px rgba(150, 150, 150, .3);
+}
+
+/***** am-right 右侧登录，注册 ******/
+.am-right {
+  display: inline-block;
+  float: right;
+}
+
+.am-right .login {
+  height: 34px;
+  width: auto;
+  padding: 0 26px;
+  background: #369fe1;
+  border: 1px solid #369fe1;
+  color: white;
+  font-size: 1.06rem;
+  margin: 18px 6px;
+}
+
+.am-right .zhuce {
+  color: #333333;
+  height: 34px;
+  width: auto;
+  padding: 0 26px;
+  background: transparent;
+  border: 1px solid #dddddd;
+  font-size: 1.06rem;
+  margin: 18px 6px;
+}
+
+.MyNav > .active > a span,
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  background: transparent;
+  color: #e32d29;
+}
+
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:active,
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:focus, .navbar-inverse .navbar-nav > .open > a:hover {
+  background: transparent !important;
+}
+
+.navbar-toggle,
+.navbar-toggle:hover {
+  margin-top: 16px;
+  margin-right: 16px;
+  border: none;
+  background: #0e90d2;
+}
+
+.navbar-toggler:focus {
+  border: none;
+  outline: 0;
+  outline: thin dotted \9;
+}
+
+.nav .open > a {
+  background: #5fa8fd;
+  border: none;
+}
+
+.scrolled.awake {
+  margin-top: 0px;
+  -webkit-transition: .3s all ease-out;
+  -o-transition: .3s all ease-out;
+  transition: .3s all ease-out;
+}
+
+.scrolled.sleep {
+  -webkit-transition: .3s all ease-out;
+  -o-transition: .3s all ease-out;
+  transition: .3s all ease-out;
+}
+
+/*========================================================================================================
+banner
+ ========================================================================================================*/
+.navbar-fixed-top {
+  width: 99vw;
+}
+
+/******** 底部导航 ********/
+.footerNav {
+  width: 100%;
+  padding: 3.2rem 0;
+  height: auto;
+  background: #2f3131;
+  color: #999999;
+}
+
+.FnavCon {
+  width: 100%;
+  text-align: center;
+  line-height: 2;
+  margin-bottom: 20px;
+}
+
+.FnavCon span {
+  margin: 0 30px;
+  font-size: 1.2rem;
+}
+
+.footer-copy {
+  width: 100%;
+  text-align: center;
+  font-size: 1.02rem;
+  line-height: 1.6;
+  margin: 0.6rem 0;
+}
+
+.FnavCon span:hover {
+  color: #369fe1;
+  cursor: pointer;
+}
+
+.BgWhite {
+  background: white !important;
+}
+
+.MyForm .el-form-item__label {
+  background: white;
+  line-height: 48px;
+  font-weight: normal;
+  text-align: justify;
+  text-align-last: justify;
+  margin: 0;
+  font-size: 1.26rem;
+  padding: 0 2%;
+}
+
+.MyForm .el-input__inner {
+  border: none;
+  height: 48px;
+  font-size: 1.16rem;
+  padding-left: 0px;
+}
+
+.MyForm .el-select-dropdown {
+  margin: 6px 0 !important;
+}
+
+.MyForm .yzm2 {
+  width: 35%;
+  padding: 0;
+  height: 46px;
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 2px;
+  border: none;
+  float: right;
+  margin: 0;
+  background: #cdd5d9;
+  text-align: center;
+}
+
+.MyForm .yzm2 svg {
+  margin-left: -14px;
+}
+
+.registerbtm {
+  clear: both;
+  border: none;
+  display: block;
+  width: 68%;
+  height: 46px;
+  text-align: center;
+  background: #359fe2;
+  font-size: 16px;
+  letter-spacing: 5px;
+  color: #fff;
+  margin: 40px auto 10px auto;
+}
+
+/*======================================================================================================================
+*****  找回密码页面
+ =====================================================================================================================*/
+.el-step__icon-inner {
+  color: white;
+  font-weight: normal;
+}
+
+.el-step__title {
+  font-size: 1.3rem;
+  color: #333333;
+}
+
+.el-step__title.is-wait {
+  color: #333333;
+}
+
+.el-step__head.is-process,
+.el-step__title.is-process {
+  color: #359fe2 !important;
+  font-weight: normal;
+  font-size: 1.3rem;
+}
+
+@media screen and (min-width: 100px) and (max-width: 767px) {
+  html {
+    font-size: 12px;
+  }
+
+  .MyForm .yzm2 svg {
+    margin-left: -10px;
+  }
+
+  /******************* 导航 *******************/
+  .navbar-inverse {
+    background: rgba(0, 0, 0, .8);
+  }
+
+  .navbar-header {
+    background: white;
+  }
+
+  .am-right {
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .am-right .login,
+  .am-right .zhuce {
+    margin: 10px 6px 0 6px;
+    font-size: 1.3rem;
+    color: white;
+  }
+
+  .am-nav > li > a span {
+    padding: 0 1rem;
+  }
+
+  .FnavCon span {
+    margin: 0 12px;
+  }
+
+  .footer-copy {
+    font-size: 1.1rem;
+  }
+
+  /*========================================================================================================
+  找回密码页面
+  ========================================================================================================*/
+  .el-step__head,
+  .el-step__head.is-process,
+  .el-step__title.is-process,
+  .el-step__title {
+    padding: 0 2px;
+    font-size: 1.16rem;
+    line-height: 1.5;
+  }
+
+  .MyForm .el-form-item__label {
+    font-size: 1.16rem;
+  }
+
+  .MyForm .el-input__inner {
+    font-size: 1.06rem;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 767px) {
+
+  .MyForm .yzm2 svg {
+    margin-left: 0px;
+  }
+}
+
+/****sm下****/
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+  .am-nav > li > a span {
+    padding: 0 1rem;
+  }
+
+}
+
+/****md下****/
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+/************************************************************ 后台自定义 ***********************************************/
+.space {
+  width: 100%;
+  height: 24px;
+  clear: both;
+}
+
+.MyContainer {
+  position: relative;
+  height: calc(100vh - 56px);
+  width: 100%;
+  overflow: hidden;
+}
+
+.MyContainer .box-card,
+.MyContainer .box-card .sp-card,
+.removeCard .box-card,
+.removeCard .box-card .sp-card,
+.el-card.elCardPad,
+.removeShadow,
+.MyContainer .el-tabs--border-card,
+.removeCard .el-tabs--border-card {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.MyContainer > .box-card,
+.removeCard > .box-card {
+  border: none;
+}
+
+.MyContainer > .box-card > .el-card__header,
+.removeCard > .box-card > .el-card__header {
+  background: #f2f2f2;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+}
+
+.MyContainer .box-card .sp-card,
+.removeCard .box-card .sp-card,
+.el-card.elCardPad {
+  border-color: #dddddd;
+}
+
+.removeBorder {
+  border: none;
+}
+
+.MyContainer .elCardPad .el-card__body,
+.removeCard .elCardPad .el-card__body {
+  padding: 0;
+}
+
+.MyContainer .el-breadcrumb,
+.removeCard .el-breadcrumb {
+  font-size: 17px;
+  padding: 12px 0;
+}
+
+.MyContainer .el-card__body,
+.removeCard .el-card__body {
+  padding: 0 10px;
+}
+
+.MyContainer .el-collapse-item__header,
+.removeCard .el-collapse-item__header {
+  font-size: 16px;
+  padding-left: 6px;
+  border-bottom: 1px dashed #dddddd;
+}
+
+.MyContainer .el-collapse-item__header span,
+.removeCard .el-collapse-item__header span {
+  color: #409EFF;
+}
+
+.MyContainer .el-collapse-item__header span > i,
+.removeCard .el-collapse-item__header span > i {
+  margin-right: 8px;
+  margin-top: 4px;
+  font-size: 20px;
+}
+
+.MyContainer .upload,
+.removeCard .upload {
+  width: 98%;
+  padding: 10px;
+  border: 1px solid #dddddd;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  min-height: 320px;
+  margin-top: 24px;
+}
+
+.MyContainer .upload .el-form-item__content,
+.removeCard .upload .el-form-item__content {
+  margin-left: 0 !important;
+}
+
+.MyContainer .upload .el-form-item label {
+  text-align: left;
+}
+
+.MyContainer .upload > p.must:before
+.removeCard .upload > p.must:before {
+  content: '*';
+  color: #f56c6c;
+  margin-right: 4px;
+}
+
+.MyContainer .upload > p,
+.removeCard .upload > p {
+  padding-left: 20px;
+  padding-top: 14px;
+  font-size: 15px;
+}
+
+.MyContainer .marBot,
+.removeCard .marBot {
+  margin-bottom: 0px;
+}
+
+.marBot .el-form-item__label,
+.marBot .el-form-item__content {
+  line-height: 30px;
+}
+
+.marBot .el-form-item__content input,
+.marBot .el-form-item__content .el-select input,
+.marBot .el-form-item__content select {
+  height: 30px !important;
+  line-height: 30px;
+}
+
+.MyContainer .el-table thead.has-gutter,
+.removeCard .el-table thead.has-gutter {
+  background: #f2f2f2;
+}
+
+.MyContainer .el-collapse-item__wrap,
+.removeCard .el-collapse-item__wrap {
+  border-bottom: none;
+}
+
+.MyContainerCon {
+  width: 100%;
+  height: calc(100% - 40px);
+  padding: 0 20px 4rem 20px;
+  position: absolute;
+  top: 46px;
+  left: 0;
+  z-index: 10;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: separate !important;
+}
+
+.layoutAuto .el-table__body {
+  table-layout: auto !important;
+}
+
+.separate table {
+  border-collapse: separate !important;
+}
+
+.el-dialog--center {
+  z-index: 9999;
+}
+
+/********* 首页个人中心我的资料 ***********************/
+.el-table th {
+  background: #edf2f5;
+  font-weight: normal;
+}
+
+.el-form.otherForm .el-form-item {
+  margin-bottom: 22px !important;
+}
+
+.notSel .el-input__suffix .el-input__suffix-inner {
+  display: none;
+}
+
+hr {
+  margin: 10px 0;
+  border-color: #dddddd;
+}
+
+.el-table,
+.el-table thead {
+  color: #333333;
+}
+
+.el-table.thCenter thead th,
+.el-table td {
+  text-align: center !important;
+}
+
+.myDialog .el-dialog {
+  margin-top: 0 !important;
+}
+
+.myDialog .el-dialog .el-dialog__header {
+  padding: 0;
+}
+
+.el-form-item__error {
+  padding-top: 2px;
+}
+
+/******************************************* 弹出框 *************************************************************/
+.MyModelremove .el-dialog__header {
+  padding: 0 26px;
+}
+
+.MyModelremoveHead {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #5fa8fd;
+}
+
+.MyModelremove.el-dialog__wrapper .el-dialog {
+  width: 80%;
+  /*height: 480px;*/
+  position: absolute;
+  margin: 0 !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -56%);
+ /* overflow:scroll;
+  overflow-x:hidden;*/
+}
+.overFlowStyle {
+  height:400px;
+   overflow:scroll;
+   overflow-x:hidden;
+}
+.lookImg {
+  width: 50%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.allIMg .el-dialog {
+  width: 100%;
+  min-height: 100%;
+  margin-top: 0% !important;
+  margin-left: 0%;
+  background: rgba(0, 0, 0, .4);
+}
+
+.allIMg .el-dialog__close,
+.allIMg .el-dialog__close:hover {
+  font-size: 40px;
+  color: white;
+}
+
+.imgDiv {
+  text-align: center;
+}
+
+.imgICON {
+  width: 250px;
+  height: 250px;
+  margin: 0px auto;
+  display: block;
+}
+
+.imgStyle {
+  width: 250px;
+  height: 150px;
+  margin: 0px auto;
+  display: block;
+}
+
+.delImg {
+  margin-left: 15px;
+}
+
+.el-button + .el-button {
+  margin-left: 0;
+}
+
+button.delImg {
+  margin-bottom: 14px;
+}
+
+.spanStyle {
+  color: #F56C6C;
+  display: block;
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 6px;
+  margin-left: 12px;
+}
+
+.myCheck .el-checkbox + .el-checkbox,
+.myCheck02 .el-checkbox + .el-checkbox {
+  margin-left: 0;
+}
+
+.myCheck .el-form-item,
+.myCheck02 .el-form-item {
+  margin-bottom: 16px;
+}
+
+.myCheck .el-checkbox,
+.myCheck02 .el-checkbox {
+  word-break: keep-all;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 40px;
+  line-height: 40px;
+  padding: 0;
+  margin: 0;
+}
+
+.myCheck .el-checkbox {
+  width: 146px;
+}
+
+.myCheck02 .el-checkbox {
+  width: 96px;
+}
+
+.dialogMyBg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .5);
+  top: 0;
+  left: 0;
+  z-index: 2000;
+}
+
+.dialogMyCon {
+  width: 60%;
+  margin: 0 !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 2%;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.dialogMyCon > p {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #5fa8fd;
+}
+
+.el-table__body {
+  border: none;
+}
+
+.el-table--border {
+  border-bottom-color: transparent;
+}
+
+.MyContainerCon .status i {
+  font-size: 12px;
+  margin-right: 4px;
+}
+
+/***************************** 状态 ******************************/
+.el-button--mini, .el-button--mini.is-round {
+  padding: 8px 11px;
+}
+
+.pass {
+  color: #5fa8fd;
+}
+
+.remove-Btn {
+  color: #5fa8fd;
+  border: 1px solid #5fa8fd;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 13px;
+}
+
+.removeBtn {
+  color: #f56c6c;
+}
+
+.await {
+  color: #e6a23c;
+}
+
+.no-pass, .pass, .finish-pass, .await, .removeBtn, .add-pass {
+  width: auto;
+}
+
+.no-pass i, .pass i, .finish-pass i, .await i, .removeBtn i, .add-pass i {
+  font-size: 12px;
+}
+
+.el-dialog--center .el-dialog__body {
+  text-align: initial;
+  padding: 20px 30px;
+}
+
+.no-pass {
+  color: #939393;
+}
+
+.el-dialog__headerbtn {
+  right: 30px;
+}
+
+.finish-pass {
+  color: #67c23a;
+}
+
+.add-pass {
+  color: #c35061;
+}
+
+.formButton {
+  text-align: center;
+  margin-top: 20px
+}
+
+.headDiv {
+  margin: 20px 0 10px 0;
+}
+
+/*************************************** tab切换 ****************************************/
+.tabGroupCon {
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.tabGroupCon .el-radio-button__orig-radio:checked + .el-radio-button__inner {
+  background-color: #ffffff;
+  box-shadow: none;
+  color: #333333;
+  border-bottom: 3px solid #0aaaf1 !important;
+}
+
+.tabGroupCon .el-radio-button {
+  flex-grow: 1;
+  display: block;
+}
+
+.tabGroupCon .el-radio-button .el-radio-button__inner:hover {
+  background: #ecf5ff;
+  color: #5fa8fd;
+}
+
+.tabGroupCon .el-radio-button .el-radio-button__inner {
+  width: 100%;
+  border-color: #dcdfe6;
+  border-radius: 0;
+  border-top: none;
+}
+
+.tabGroupCon .el-radio-button:first-child .el-radio-button__inner {
+  border-left: none;
+}
+
+.tabGroupCon .el-radio-button:last-child .el-radio-button__inner {
+  border-right: none;
+}
+
+.searchtable {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.searchtable > div {
+  margin-right: 10px;
+}
+
+.searchtable > div.grow {
+  flex-shrink: 1;
+  flex-grow: 1;
+}
+
+.el-table__empty-block {
+  width: 100% !important;
+}
+
+.el-input.is-disabled .el-input__inner,
+.el-textarea.is-disabled .el-textarea__inner {
+  background-color: #ffffff !important;
+  border: none !important;
+  color: #909399 !important;
+  cursor: not-allowed;
+  padding-left: 0 !important;
+}
+.dialog-footer{
+  position: fixed;
+  bottom: 20px;
+  left: 380px;
+}
+
+.remarkStyle{
+  width:90%;
+}
+
+
+/*************************************** tab切换 ****************************************/
+.Myapp-tabs {
+  float: left;
+  height: auto;
+  width: calc(100% / 3);
+  text-align: center;
+  font-size: 1.1em;
+  color: #777777;
+  border-bottom: 1px solid #dddddd;
+  /* margin: 20px 0; */
+}
+
+.Myapp-tabs:nth-child(1) .el-button,
+.Myapp-tabs:nth-child(3) .el-button {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 1px solid #d5d6d7;
+}
+
+.Myapp-tabs:nth-child(2) .el-button {
+  border-top: none;
+  border-left: 1px solid #d5d6d7;
+  border-right: 1px solid #d5d6d7;
+  border-bottom: 1px solid #d5d6d7;
+}
+
+.Myapp-tabs .active {
+  color: #333333;
+  border-bottom: 3px solid #0aaaf1 !important;
+}

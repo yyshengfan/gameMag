@@ -1,0 +1,283 @@
+/******************************************************* rotateX ******************************************************/
+@-webkit-keyframes rotateX {
+  from {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate3d(0.2, 0.2, 1, 360deg);
+    transform: rotate3d(0.2, 0.2, 1, 360deg);
+  }
+}
+
+@-moz-keyframes rotateX {
+  from {
+    -moz-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+
+  100% {
+    -moz-transform: rotate3d(0.2, 0.2, 1, 360deg);
+    transform: rotate3d(0.2, 0.2, 1, 360deg);
+  }
+}
+
+@-o-keyframes rotateX {
+  from {
+    -o-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+
+  100% {
+    -o-transform: rotate3d(0.2, 0.2, 1, 360deg);
+    transform: rotate3d(0.2, 0.2, 1, 360deg);
+  }
+}
+
+@keyframes rotateX {
+  from {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+
+  100% {
+    transform: rotate3d(0.2, 0.2, 1, 360deg);
+  }
+}
+/****************************************************** flyUpAnim *************************************************/
+@-webkit-keyframes flyUpAnim {
+  from {
+    -webkit-transform: translate3d(50%, 50%, 0);
+    transform: translate3d(50%, 50%, 0);
+  }
+
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@-moz-keyframes flyUpAnim {
+  from {
+    -moz-transform: translate3d(50%, 50%, 0);
+    transform: translate3d(50%, 50%, 0);
+  }
+
+  100% {
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@-o-keyframes flyUpAnim {
+  from {
+    -o-transform: translate3d(50%, 50%, 0);
+    transform: translate3d(50%, 50%, 0);
+  }
+
+  100% {
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes flyUpAnim {
+  from {
+    transform: translate3d(50%, 50%, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+/**************************************************** bannerImg2Ani *************************************************/
+@-webkit-keyframes bannerImg2Ani {
+  0%,100% {
+    -webkit-transform: translate3d(-10px, -6px, -6px);
+    transform: translate3d(-10px, -6px, -6px);
+  }
+  50% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@-moz-keyframes bannerImg2Ani {
+  0%,100% {
+    -moz-transform: translate3d(-10px, -6px, -6px);
+    transform: translate3d(-10px, -6px, -6px);
+  }
+  50% {
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@-o-keyframes bannerImg2Ani {
+  0%,100% {
+    -o-transform: translate3d(-10px, -6px, -6px);
+    transform: translate3d(-10px, -6px, -6px);
+  }
+  50% {
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes bannerImg2Ani {
+  0%,100% {
+    transform: translate3d(-10px, -6px, -6px);
+  }
+
+  50% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+/**************************************************** joinImgscale ****************************************************/
+@-webkit-keyframes joinImgscale {
+  0%,100% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  50% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@-moz-keyframes joinImgscale {
+  0%,100% {
+    -moz-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  50% {
+    -moz-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@-o-keyframes joinImgscale {
+  0%,100% {
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  50% {
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes joinImgscale {
+  0%,100% {
+    transform: scale(1.2);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+}
+/*************************************************************** moveBg *********************************************/
+@-webkit-keyframes moveBg {
+  from {
+    background-position: 0 center;
+  }
+  to {
+    background-position: -120px center;
+  }
+}
+@-moz-keyframes moveBg {
+  from {
+    background-position: 0 center;
+  }
+  to {
+    background-position: -120px center;
+  }
+}
+@-o-keyframes moveBg {
+  from {
+    background-position: 0 center;
+  }
+  to {
+    background-position: -120px center;
+  }
+}
+@keyframes moveBg {
+  from {
+    background-position: 0 center;
+  }
+  to {
+    background-position: -120px center;
+  }
+}
+/*************************************************************** moveBg02 *********************************************/
+@-webkit-keyframes moveBg02 {
+  from {
+    background-position: 0 center;
+  }
+  to {
+    background-position: -100px center;
+  }
+}
+@-moz-keyframes moveBg02 {
+  from {
+    background-position: 0 center;
+  }
+  to {
+    background-position: -100px center;
+  }
+}
+@-o-keyframes moveBg02 {
+  from {
+    background-position: 0 center;
+  }
+  to {
+    background-position: -100px center;
+  }
+}
+@keyframes moveBg02 {
+  from {
+    background-position: 0 center;
+  }
+  to {
+    background-position: -100px center;
+  }
+}
+/************************************************************** rotate ************************************************/
+@-webkit-keyframes rotate {
+  from{
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to{
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes rotate {
+  from{
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to{
+    -moz-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes rotate {
+  from{
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to{
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}

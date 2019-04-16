@@ -1,0 +1,229 @@
+var form = function (option) {
+  this.computed = {
+    action() {
+      if(this.setAction){
+        return this.setAction
+      }else{
+        return this.$route.params.id == 'new' ? 'add' : 'update'
+      }
+    },
+    dirty() {
+      return !_.isEqual(this.model, this.origModel) || this.dirtyFn
+    }
+  };
+
+  this.methods = {
+    reset() {
+      for (var key in this.model) {
+        this.model[key] = this.origModel[key]
+      }
+      if(typeof this.resetFn == "function"){
+        this.resetFn();
+      }
+    },
+    initModel(data) {
+      for (var key in this.model) {
+        if(this.modelFormat && this.modelFormat[key]){
+          this.model[key] = this.modelFormat[key](data[key]);
+        }
+        else{
+          this.model[key] = data[key]
+        }
+      }
+      this.origModel = _.clone(this.model)
+    },
+    updateOrigModel() {
+      this.origModel = _.clone(this.model)
+    },
+    get(data,callback) {
+      if (this.action == 'add') {
+        if(typeof callback == 'function'){
+          callback("noAdd");
+        }
+        return
+      }
+
+      var params = {};
+      if(data){
+        params = data
+      }else{
+        params[option.store.idName] = this.$route.params.id;
+      }
+
+      this.loading = true;
+      option.store.get(params, (data) => {
+        this.loading = false;
+        data = data.list? data.list[0]:data
+        this.initModel(data)
+        if(typeof callback == 'function'){
+          callback(null,data);
+        }
+      }, () => {
+        this.loading = false
+        if(typeof callback == 'function'){
+          callback("loading err");
+        }
+      })
+    },
+    save(datas) {
+      this.$refs['form'].validate((valid) => {
+        if (valid) {
+          this.loading = true;
+          var params = datas || _.clone(this.model);
+          if(this.modelSaveExtra){
+            for (var key in this.modelSaveExtra) {
+              var val = this.modelSaveExtra[key].call(this);
+              if(val){
+                params[key] = val
+              }
+              else{
+                delete params[key]
+              }
+            }
+          }
+          console.log(11,params)
+          option.store[this.action](params, (data) => {
+            console.log(this.action)
+            this.loading = false;
+            if (this.action == 'add') {
+              this.model[option.store.idName] = data[option.store.idName];
+              if(data.createAt){this.model.createAt = data.createAt}
+              if(data.createBy){this.model.createBy = data.createBy}
+              this.$router.replace({name: this.routeName, params: {id: data[option.store.idName]}})
+            }
+            this.updateOrigModel(this.model);
+            if(typeof this.saveFn == "function"){
+              this.saveFn();
+            }
+            else {
+              this.back();
+            }
+          }, (data) => {
+            this.loading = false
+          })
+        }
+      })
+    },
+    remove() {
+      this.$swal({
+        title: '提示',
+        text: '此操作将删除该记录, 是否继续?',
+        type: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#d33',
+        confirmButtonText: '确定',
+        cancelButtonText: '取消'
+      }).then((result) => {
+        if (result.value) {
+          var params = {};
+          params[option.store.idName] = this.model[option.store.idName];
+          this.loading = true;
+          option.store.delete(params, (data) => {
+            this.loading = false;
+            this.back();
+          }, () => {
+            this.loading = false
+          })
+        }
+      })
+    },
+    back() {
+      this.$router.go(-1)
+    },
+    getEnCode(){
+      this.$http.get('/enCode', this.model)
+        .then((response) => {
+          document.getElementById("enCode").innerHTML = response.data.data.img
+        })
+        .catch((response) => {
+
+        })
+    },
+    getCode(){
+      if(this.msg !== '获取短信验证码'){
+        return
+      }
+      this.msgCode = []
+      this.$refs['form'].validate((valid) => {
+        if (valid) {
+          var time = 59
+          var _this = this
+          this.msg = time
+          var timeOut = setInterval(function(){
+            _this.msg = --time
+            if(!time){
+              _this.msg = '获取短信验证码'
+              clearInterval(timeOut)
+            }
+          }, 1000);
+          var params = {
+            encode: this.model.encode,
+            loginName:this.model.loginName,
+            type: this.name === 'regist'? 0:1
+          }
+
+          this.$http.post('/login/getcode', params)
+            .then((response) => {
+              this.$confirm(response.data.respMsg, '提示', {
+                type: 'success',
+              })
+            })
+            .catch((response) => {
+              this.msg = '获取短信验证码'
+              clearInterval(timeOut)
+              this.$confirm(response.data.respMsg, '提示', {
+                type: 'warning',
+              })
+            })
+        }
+      })
+    },
+    formatOtherDate(value,type){
+      if(value) {//判断对应的属性是否存在
+        return this.formatDate(value,type)
+      }
+    },
+
+    formatYMD(ymd) {
+      return ymd<10?('0'+ymd):ymd;
+    },
+
+    formatDate(time,type) {
+      var dt = new Date(time)
+      var month=this.formatYMD(dt.getMonth()+1)
+      var day=this.formatYMD(dt.getDate())
+      var hh=this.formatYMD(dt.getHours())
+      var mm=this.formatYMD(dt.getMinutes())
+      var ss=this.formatYMD(dt.getSeconds())
+      switch (type) {
+        case 1:
+          return time=dt.getFullYear();
+        case 2:
+          return time=dt.getFullYear()+'-'+month;
+        case 3:
+          return time=dt.getFullYear()+'-'+month+'-'+day;
+        default:
+          return time=dt.getFullYear()+'-'+month+'-'+day+" " +hh+":"+ mm+":"+ ss;
+      }
+    },
+    initButton(parent,child){
+      let privates = this.$store.getters['navList/data'];
+      let list = [];
+      for(let item of privates){
+        if(parent == item.id){
+          for(let citem of item.children){
+            if(child == citem.id){
+              list =  citem.children;
+              break;
+            }
+          }
+        }
+      }
+      for(var item of list){
+        this.buttonList[item.name] = true
+      }
+    }
+  }
+}
+
+export default form
